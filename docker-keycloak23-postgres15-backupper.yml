@@ -36,8 +36,6 @@ services:
     # https://github.com/prodrigestivill/docker-postgres-backup-local
     # https://pkg.go.dev/github.com/robfig/cron#hdr-Predefined_schedules
   pgbackups:
-    depends_on:
-      - postgres
     container_name: local_pgbackups
     image: prodrigestivill/postgres-backup-local
     restart: always
