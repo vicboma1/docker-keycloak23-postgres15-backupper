@@ -12,7 +12,7 @@ services:
       POSTGRES_DB: keycloak
     volumes:
       - type: bind
-        source: ./storage/postgres
+        source: ./storage/postgres # <-- cambiar por disco físico
         target: /var/lib/postgresql/data
     networks:
       - net-keycloak
@@ -45,7 +45,7 @@ services:
     #user: postgres:postgres # Optional: see below
     volumes:
       - type: bind
-        source: ./backups
+        source: ./backups # <-- cambiar por disco físico
         target: /backups
     links:
       - postgres
